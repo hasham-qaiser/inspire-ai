@@ -100,7 +100,12 @@ const Home = () => {
                 <span className="text-[#222328]">{searchText}</span>:
               </h2>
             )}
-            <motion.div className="grid lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-3">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.7 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7 }}
+              className="grid lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-3"
+            >
               {searchText ? (
                 <RenderCards
                   data={searchedResults}
